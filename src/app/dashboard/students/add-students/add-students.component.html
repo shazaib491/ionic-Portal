@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="danger">
+    <ion-title>
+      Portal
+    </ion-title>
+    <ion-buttons slot="end" (click)="presentPopover($event)">
+      <ion-button>
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"  ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="">
+  <ion-row class="ion-justify-content-center ion-margin">
+    <ion-col size="12" class="ion-padding">
+      <div class="ion-padding login-card">
+        <ion-card>
+          <ion-card-header color="danger" class="login-card-header">
+            <ion-card-title>Add Student</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <form (ngSubmit)="submit()">
+              <ion-item>
+                <ion-label position="floating">Enter Enrollment no</ion-label>
+                <ion-input type="text" [(ngModel)]="model.e_roll" name="e_roll"></ion-input>
+              </ion-item>
+              <section class="full-width ion-margin">
+                <ion-button color="danger"  type="submit" size="" fill="outline">
+                  <ion-icon name="add-circle-outline"></ion-icon>
+                  Add
+                </ion-button>
+              </section>
+            </form>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
